@@ -22,3 +22,5 @@ export {
   type CardFooterProps,
 } from './components/card/card.js';
 export { Skeleton, type SkeletonProps } from './components/skeleton/skeleton.js';
+export { Spinner, type SpinnerProps } from './components/spinner/spinner.js';
+export { spinnerVariants } from './components/spinner/spinner.styles.js';
