@@ -24,3 +24,12 @@ export {
 export { Skeleton, type SkeletonProps } from './components/skeleton/skeleton.js';
 export { Spinner, type SpinnerProps } from './components/spinner/spinner.js';
 export { spinnerVariants } from './components/spinner/spinner.styles.js';
+export {
+  Alert,
+  AlertTitle,
+  AlertDescription,
+  type AlertProps,
+  type AlertTitleProps,
+  type AlertDescriptionProps,
+} from './components/alert/alert.js';
+export { alertVariants } from './components/alert/alert.styles.js';

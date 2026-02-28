@@ -1,0 +1,6 @@
+- `packages/ui/src/components/alert/alert.tsx` — fixed `AlertTitle` to explicitly destructure and render `children` to satisfy `jsx-a11y/heading-has-content` lint rule (the `<h5>` element requires visible children for static analysis)
+- `packages/ui/src/components/alert/alert.styles.ts` — no changes needed (already correct)
+- `packages/ui/src/components/alert/alert.types.ts` — no changes needed (already correct)
+- `packages/ui/src/components/alert/alert.test.tsx` — no changes needed (all 18 tests pass)
+- `packages/ui/src/components/alert/alert.stories.tsx` — no changes needed (already correct)
+- `packages/ui/src/index.ts` — no changes needed (exports already present)
