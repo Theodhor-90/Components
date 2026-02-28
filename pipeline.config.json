@@ -1,0 +1,21 @@
+{
+  "project": "components",
+  "levels": {
+    "milestone": {
+      "maxIterations": 2
+    },
+    "phase": {
+      "maxIterations": 2
+    },
+    "task": {
+      "maxIterations": 2
+    },
+    "implementation": {
+      "agents": {
+        "creator": "codex",
+        "challenger": "codex"
+      },
+      "maxIterations": 2
+    }
+  }
+}
