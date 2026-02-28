@@ -1,0 +1,1 @@
+- [packages/ui/src/components/badge/badge.test.tsx](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/src/components/badge/badge.test.tsx): added `userEvent`/`vi` imports and two new tests covering required interaction behavior: click handling and Enter-key activation when `Badge` is rendered as an interactive child via `asChild`.
