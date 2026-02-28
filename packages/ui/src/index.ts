@@ -21,3 +21,4 @@ export {
   type CardContentProps,
   type CardFooterProps,
 } from './components/card/card.js';
+export { Skeleton, type SkeletonProps } from './components/skeleton/skeleton.js';
