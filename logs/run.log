@@ -74,3 +74,27 @@
 2026-02-28T19:31:02.110Z | m01/p01/t01 | implementation |  | Tiebreaker produced final artifact
 2026-02-28T19:31:02.111Z | - | checkpoint |  | State saved after: task m01/p01/t01 completed
 2026-02-28T19:31:02.144Z | - | git |  | Staging all changes for task t01
+2026-02-28T19:31:02.202Z | - | git |  | Committing task m01/p01/t01
+2026-02-28T19:31:04.265Z | - | checkpoint |  | State saved after: task m01/p01/t02 → planning
+2026-02-28T19:31:04.266Z | m01/p01/t02 | task | attempt:1/total:2 | Drafting
+2026-02-28T19:31:04.266Z | - | cli |  | claude -p [opus] (tools: Read,Glob,Grep, max-turns: 25, schema: none)
+2026-02-28T19:32:21.310Z | m01/p01/t02 | task | attempt:1/total:2 | Challenging draft v1
+2026-02-28T19:32:21.311Z | - | cli |  | claude -p [opus] (tools: Read,Glob,Grep, max-turns: 25, schema: challenge-decision.json)
+2026-02-28T19:33:01.465Z | m01/p01/t02 | task |  | Draft v1 approved
+2026-02-28T19:33:01.467Z | - | checkpoint |  | State saved after: task m01/p01/t02 plan locked
+2026-02-28T19:33:01.467Z | - | checkpoint |  | State saved after: task m01/p01/t02 → implementing
+2026-02-28T19:33:01.468Z | m01/p01/t02 | implementation | attempt:1/total:2 | Drafting
+2026-02-28T19:33:01.468Z | - | cli |  | codex exec (sandbox: workspace-write, schema: none)
+2026-02-28T19:37:04.518Z | m01/p01/t02 | implementation | attempt:1/total:2 | Challenging draft v1
+2026-02-28T19:37:04.518Z | - | cli |  | codex exec (sandbox: read-only, schema: review-decision.json)
+2026-02-28T19:39:53.302Z | m01/p01/t02 | implementation |  | Draft v1 rejected
+2026-02-28T19:39:53.302Z | m01/p01/t02 | implementation | attempt:2/total:2 | Refining (iteration 2)
+2026-02-28T19:39:53.303Z | - | cli |  | codex exec (sandbox: workspace-write, schema: none)
+2026-02-28T19:41:25.989Z | m01/p01/t02 | implementation | attempt:2/total:2 | Challenging draft v2
+2026-02-28T19:41:25.990Z | - | cli |  | codex exec (sandbox: read-only, schema: review-decision.json)
+2026-02-28T19:43:45.998Z | m01/p01/t02 | implementation |  | Draft v2 rejected
+2026-02-28T19:43:45.999Z | m01/p01/t02 | implementation |  | All 2 iterations rejected — invoking tiebreaker
+2026-02-28T19:43:45.999Z | - | cli |  | claude -p [opus] (tools: Read,Glob,Grep,Write,Edit,Bash, max-turns: 40, schema: none)
+2026-02-28T19:45:14.018Z | m01/p01/t02 | implementation |  | Tiebreaker produced final artifact
+2026-02-28T19:45:14.020Z | - | checkpoint |  | State saved after: task m01/p01/t02 completed
+2026-02-28T19:45:14.053Z | - | git |  | Staging all changes for task t02
