@@ -1,0 +1,31 @@
+{
+  "name": "@components/docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build": "storybook build",
+    "clean": "rm -rf storybook-static .turbo"
+  },
+  "dependencies": {
+    "@components/ui": "workspace:*",
+    "@components/utils": "workspace:*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@components/tsconfig": "workspace:*",
+    "@storybook/addon-a11y": "^8.5.0",
+    "@storybook/addon-essentials": "^8.5.0",
+    "@storybook/addon-themes": "^8.5.0",
+    "@storybook/react": "^8.5.0",
+    "@storybook/react-vite": "^8.5.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "storybook": "^8.5.0",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}
