@@ -87,3 +87,4 @@ export {
   type PopoverTriggerProps,
   type PopoverContentProps,
 } from './components/popover/popover.js';
+export { Toaster, toast, type ToasterProps } from './components/sonner/sonner.js';
