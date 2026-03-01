@@ -120,7 +120,13 @@ describe('Dialog', () => {
     render(<TestDialog open />);
 
     const dialog = screen.getByRole('dialog');
-    const trigger = screen.getByRole('button', { name: 'Open Dialog' });
+    const trigger = document.querySelector('[data-slot="dialog-trigger"]');
+
+    expect(trigger).toBeInTheDocument();
+
+    if (!(trigger instanceof HTMLElement)) {
+      throw new Error('Dialog trigger is missing');
+    }
 
     for (let iteration = 0; iteration < 8; iteration += 1) {
       await user.tab();
@@ -251,7 +257,9 @@ describe('Dialog', () => {
       />,
     );
 
-    expect(screen.getByRole('button', { name: 'Open Dialog' })).toHaveClass('custom-trigger-class');
+    expect(document.querySelector('[data-slot="dialog-trigger"]')).toHaveClass(
+      'custom-trigger-class',
+    );
     expect(screen.getByRole('dialog')).toHaveClass('custom-content-class');
     expect(document.querySelector('[data-slot="dialog-header"]')).toHaveClass(
       'custom-header-class',

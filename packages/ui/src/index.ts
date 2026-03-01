@@ -79,3 +79,11 @@ export {
   type AlertDialogActionProps,
   type AlertDialogCancelProps,
 } from './components/alert-dialog/alert-dialog.js';
+export {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  type PopoverProps,
+  type PopoverTriggerProps,
+  type PopoverContentProps,
+} from './components/popover/popover.js';

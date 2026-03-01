@@ -173,7 +173,13 @@ describe('AlertDialog', () => {
     render(<TestAlertDialog open />);
 
     const dialog = screen.getByRole('alertdialog');
-    const trigger = screen.getByRole('button', { name: 'Open Alert' });
+    const trigger = document.querySelector('[data-slot="alert-dialog-trigger"]');
+
+    expect(trigger).toBeInTheDocument();
+
+    if (!(trigger instanceof HTMLElement)) {
+      throw new Error('AlertDialog trigger is missing');
+    }
 
     for (let iteration = 0; iteration < 8; iteration += 1) {
       await user.tab();
@@ -314,7 +320,9 @@ describe('AlertDialog', () => {
       />,
     );
 
-    expect(screen.getByRole('button', { name: 'Open Alert' })).toHaveClass('custom-trigger-class');
+    expect(document.querySelector('[data-slot="alert-dialog-trigger"]')).toHaveClass(
+      'custom-trigger-class',
+    );
     expect(screen.getByRole('alertdialog')).toHaveClass('custom-content-class');
     expect(document.querySelector('[data-slot="alert-dialog-header"]')).toHaveClass(
       'custom-header-class',
