@@ -1,0 +1,2 @@
+- [packages/ui/package.json](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/package.json): added `"tailwindcss-animate": "^1.0.7"` to `dependencies`.
+- [packages/ui/styles/globals.css](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/styles/globals.css): inserted `@plugin "tailwindcss-animate";` immediately after `@import 'tailwindcss';`.

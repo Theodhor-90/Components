@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@plugin "tailwindcss-animate";
+
 /*
  * Design Tokens — Light Theme
  * Using OKLCH color space for perceptually uniform colors.

@@ -1,0 +1,3 @@
+- [packages/ui/package.json](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/package.json): added `"tailwindcss-animate": "^1.0.7"` to `dependencies`.
+- [packages/ui/styles/globals.css](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/styles/globals.css): added `@plugin "tailwindcss-animate";` immediately after `@import 'tailwindcss';`.
+- [pnpm-lock.yaml](/Users/theodhor/Desktop/Portfolio/Components/pnpm-lock.yaml): added `tailwindcss-animate` lock entries in `importers.packages/ui.dependencies`, `packages.tailwindcss-animate@1.0.7` (with peer requirement), and `snapshots.tailwindcss-animate@1.0.7(tailwindcss@4.2.1)`.
