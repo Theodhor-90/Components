@@ -55,6 +55,20 @@ export {
   type DialogDescriptionProps,
   type DialogCloseProps,
 } from './components/dialog/dialog.js';
+export { Label, type LabelProps } from './components/label/label.js';
+export { labelVariants } from './components/label/label.styles.js';
+export {
+  VisuallyHidden,
+  type VisuallyHiddenProps,
+} from './components/visually-hidden/visually-hidden.js';
+export {
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsibleContent,
+  type CollapsibleProps,
+  type CollapsibleTriggerProps,
+  type CollapsibleContentProps,
+} from './components/collapsible/collapsible.js';
 export {
   AlertDialog,
   AlertDialogTrigger,

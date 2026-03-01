@@ -1,0 +1,1 @@
+- [packages/ui/package.json](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/package.json): added runtime dependencies `@radix-ui/react-collapsible` (`^1.1.0`), `@radix-ui/react-label` (`^2.1.0`), and `@radix-ui/react-visually-hidden` (`^1.1.0`) under `dependencies`.
