@@ -1,0 +1,7 @@
+- `packages/ui/package.json`: added `"sonner": "^2.0.0"` to `dependencies`.
+- `packages/ui/src/index.ts`: added `Toaster`, `toast`, and `type ToasterProps` export from `./components/sonner/sonner.js`.
+- `packages/ui/src/components/sonner/sonner.types.ts`: created `ToasterProps` as `React.ComponentProps<typeof SonnerToaster>` from `sonner`.
+- `packages/ui/src/components/sonner/sonner.styles.ts`: created `toasterThemeConfig` with semantic token-based `toastOptions.style` and `classNames`.
+- `packages/ui/src/components/sonner/sonner.tsx`: created `Toaster` wrapper around Sonner `<Toaster />` with runtime dark/light theme resolution, `data-slot="sonner"`, config spread, and `toast` re-export.
+- `packages/ui/src/components/sonner/sonner.test.tsx`: added Sonner tests for smoke render, imperative `toast()` render, success/error variants, `data-slot`, description rendering, and axe accessibility.
+- `packages/ui/src/components/sonner/sonner.stories.tsx`: added CSF3 autodocs stories `Default`, `Success`, `Error`, `WithDescription`, `WithAction`, and `Promise` using trigger buttons plus `<Toaster />`.
