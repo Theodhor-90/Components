@@ -1,0 +1,2 @@
+- `packages/ui/package.json`: kept the six required Phase 2 Radix dependencies under `dependencies` (`@radix-ui/react-checkbox`, `@radix-ui/react-switch`, `@radix-ui/react-radio-group`, `@radix-ui/react-toggle`, `@radix-ui/react-toggle-group`, `@radix-ui/react-select`).
+- `pnpm-lock.yaml`: updated `importers.packages/ui.dependencies` to include the same six Radix packages with resolved lockfile version entries so the `packages/ui` importer reflects the declared dependencies.
