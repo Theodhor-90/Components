@@ -15,6 +15,8 @@ export function Toaster({ theme, ...props }: ToasterProps): React.JSX.Element {
       : 'light');
 
   return (
-    <SonnerToaster data-slot="sonner" theme={resolvedTheme} {...toasterThemeConfig} {...props} />
+    <div data-slot="sonner" data-theme={resolvedTheme}>
+      <SonnerToaster theme={resolvedTheme} {...toasterThemeConfig} {...props} />
+    </div>
   );
 }

@@ -102,3 +102,5 @@ export {
   type PopoverContentProps,
 } from './components/popover/popover.js';
 export { Toaster, toast, type ToasterProps } from './components/sonner/sonner.js';
+export { Input, type InputProps } from './components/input/input.js';
+export { inputVariants } from './components/input/input.styles.js';
