@@ -108,3 +108,5 @@ export { Textarea, type TextareaProps } from './components/textarea/textarea.js'
 export { textareaVariants } from './components/textarea/textarea.styles.js';
 export { Checkbox, type CheckboxProps } from './components/checkbox/checkbox.js';
 export { checkboxVariants } from './components/checkbox/checkbox.styles.js';
+export { Switch, type SwitchProps } from './components/switch/switch.js';
+export { switchVariants } from './components/switch/switch.styles.js';
