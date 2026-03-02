@@ -177,3 +177,52 @@ export {
   formDescriptionVariants,
   formMessageVariants,
 } from './components/form/form.styles.js';
+export {
+  Sheet,
+  SheetTrigger,
+  SheetPortal,
+  SheetOverlay,
+  SheetContent,
+  SheetHeader,
+  SheetFooter,
+  SheetTitle,
+  SheetDescription,
+  SheetClose,
+  type SheetProps,
+  type SheetTriggerProps,
+  type SheetPortalProps,
+  type SheetOverlayProps,
+  type SheetContentProps,
+  type SheetHeaderProps,
+  type SheetFooterProps,
+  type SheetTitleProps,
+  type SheetDescriptionProps,
+  type SheetCloseProps,
+} from './components/sheet/sheet.js';
+export { sheetContentVariants } from './components/sheet/sheet.styles.js';
+export {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+  type TabsProps,
+  type TabsListProps,
+  type TabsTriggerProps,
+  type TabsContentProps,
+} from './components/tabs/tabs.js';
+export {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+  type AccordionProps,
+  type AccordionItemProps,
+  type AccordionTriggerProps,
+  type AccordionContentProps,
+} from './components/accordion/accordion.js';
+export {
+  ScrollArea,
+  ScrollBar,
+  type ScrollAreaProps,
+  type ScrollBarProps,
+} from './components/scroll-area/scroll-area.js';
