@@ -8,6 +8,8 @@ import { z } from 'zod';
 
 import { Input } from '../input/input.js';
 import { Checkbox } from '../checkbox/checkbox.js';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../select/select.js';
+import { Slider } from '../slider/slider.js';
 import {
   Form,
   FormControl,
@@ -357,6 +359,65 @@ describe('Form', () => {
       </TestForm>,
     );
     expect(screen.getByRole('checkbox')).toBeInTheDocument();
+  });
+
+  it('integrates with Select', () => {
+    const fruitSchema = z.object({
+      fruit: z.enum(['apple', 'banana', 'cherry'], { message: 'Please select a fruit.' }),
+    });
+    render(
+      <TestForm schema={fruitSchema} defaultValues={{ fruit: '' }}>
+        <FormField
+          name="fruit"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Fruit</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a fruit" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="apple">Apple</SelectItem>
+                  <SelectItem value="banana">Banana</SelectItem>
+                  <SelectItem value="cherry">Cherry</SelectItem>
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </TestForm>,
+    );
+    expect(screen.getByRole('combobox')).toBeInTheDocument();
+  });
+
+  it('integrates with Slider', () => {
+    const sliderSchema = z.object({ volume: z.array(z.number()) });
+    render(
+      <TestForm schema={sliderSchema} defaultValues={{ volume: [50] }}>
+        <FormField
+          name="volume"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Volume</FormLabel>
+              <FormControl>
+                <Slider
+                  min={0}
+                  max={100}
+                  step={1}
+                  value={field.value}
+                  onValueChange={field.onChange}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </TestForm>,
+    );
+    expect(screen.getByRole('slider')).toBeInTheDocument();
   });
 
   it('validates multiple fields independently', async () => {

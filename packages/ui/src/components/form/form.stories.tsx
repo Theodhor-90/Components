@@ -9,6 +9,7 @@ import { Checkbox } from '../checkbox/checkbox.js';
 import { Input } from '../input/input.js';
 import { RadioGroup, RadioGroupItem } from '../radio-group/radio-group.js';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../select/select.js';
+import { Slider } from '../slider/slider.js';
 import { Switch } from '../switch/switch.js';
 import { Textarea } from '../textarea/textarea.js';
 import { Label } from '../label/label.js';
@@ -308,6 +309,47 @@ function WithSwitchDemo() {
 
 export const WithSwitch: Story = {
   render: () => <WithSwitchDemo />,
+};
+
+function WithSliderDemo() {
+  const schema = z.object({
+    volume: z.array(z.number().min(0).max(100)),
+  });
+  const form = useForm({
+    resolver: zodResolver(schema),
+    defaultValues: { volume: [50] },
+  });
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(console.log)} className="space-y-4">
+        <FormField
+          control={form.control}
+          name="volume"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Volume</FormLabel>
+              <FormControl>
+                <Slider
+                  min={0}
+                  max={100}
+                  step={1}
+                  value={field.value}
+                  onValueChange={field.onChange}
+                />
+              </FormControl>
+              <FormDescription>Adjust the volume level.</FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button type="submit">Submit</Button>
+      </form>
+    </Form>
+  );
+}
+
+export const WithSlider: Story = {
+  render: () => <WithSliderDemo />,
 };
 
 function CompleteFormDemo() {

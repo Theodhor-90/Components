@@ -1,0 +1,3 @@
+- `packages/ui/src/components/form/form.stories.tsx` — Added `Slider` import; added `WithSliderDemo` function and `WithSlider` story export (Form + Slider integration with zod validation, placed between `WithSwitch` and `CompleteForm`)
+- `packages/ui/src/components/form/form.test.tsx` — Added `Select`, `SelectContent`, `SelectItem`, `SelectTrigger`, `SelectValue` and `Slider` imports; added "integrates with Select" test (renders Form wrapping Select, asserts `combobox` role); added "integrates with Slider" test (renders Form wrapping Slider, asserts `slider` role)
+- **Verification**: 338/338 tests pass (24 test files), typecheck clean
