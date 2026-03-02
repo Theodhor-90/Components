@@ -1,0 +1,1 @@
+- `packages/ui/package.json`: added six runtime Radix dependencies under `dependencies` (alphabetically with existing entries): `@radix-ui/react-checkbox` `^1.3.2`, `@radix-ui/react-switch` `^1.2.2`, `@radix-ui/react-radio-group` `^1.3.2`, `@radix-ui/react-toggle` `^1.1.9`, `@radix-ui/react-toggle-group` `^1.1.10`, `@radix-ui/react-select` `^2.2.4`.

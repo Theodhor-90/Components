@@ -1,0 +1,4 @@
+- **`packages/ui/package.json`**: 6 Radix dependencies present under `dependencies` (already added by prior attempts): `@radix-ui/react-checkbox`, `@radix-ui/react-switch`, `@radix-ui/react-radio-group`, `@radix-ui/react-toggle`, `@radix-ui/react-toggle-group`, `@radix-ui/react-select`
+- **`pnpm-lock.yaml`**: +312 lines — resolved lockfile entries for all 6 new Radix packages, fixing the `ERR_PNPM_LOCKFILE_MISSING_DEPENDENCY` that caused both prior review rejections. Frozen install (`CI=true pnpm install --frozen-lockfile`) now succeeds.
+- `pnpm typecheck` — passes
+- `pnpm test` — 208/208 pass

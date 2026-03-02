@@ -1,0 +1,1 @@
+- [packages/ui/src/components/radio-group/radio-group.styles.ts](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/src/components/radio-group/radio-group.styles.ts): updated `radioGroupItemVariants` to use `focus-visible:outline-none` instead of `focus:outline-none` (locked-plan alignment).
