@@ -642,24 +642,24 @@
           }
         },
         "p03": {
-          "status": "in_progress",
+          "status": "spec_locked",
           "planning": {
             "iteration": 2,
             "totalAttempts": 2,
             "tiebreakerUsed": false
           },
-          "currentTask": "t01",
+          "currentTask": null,
           "tasks": {
             "t01": {
-              "status": "completed",
+              "status": "pending",
               "planning": {
-                "iteration": 2,
-                "totalAttempts": 2,
+                "iteration": 0,
+                "totalAttempts": 0,
                 "tiebreakerUsed": false
               },
               "implementation": {
-                "iteration": 1,
-                "totalAttempts": 1,
+                "iteration": 0,
+                "totalAttempts": 0,
                 "tiebreakerUsed": false
               }
             },

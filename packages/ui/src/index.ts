@@ -226,3 +226,47 @@ export {
   type ScrollAreaProps,
   type ScrollBarProps,
 } from './components/scroll-area/scroll-area.js';
+export {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  BreadcrumbEllipsis,
+  type BreadcrumbProps,
+  type BreadcrumbListProps,
+  type BreadcrumbItemProps,
+  type BreadcrumbLinkProps,
+  type BreadcrumbPageProps,
+  type BreadcrumbSeparatorProps,
+  type BreadcrumbEllipsisProps,
+} from './components/breadcrumb/breadcrumb.js';
+export {
+  SidebarProvider,
+  SidebarTrigger,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  useSidebar,
+  type SidebarProviderProps,
+  type SidebarTriggerProps,
+  type SidebarContentProps,
+  type SidebarGroupProps,
+  type SidebarGroupLabelProps,
+  type SidebarMenuProps,
+  type SidebarMenuItemProps,
+  type SidebarMenuButtonProps,
+} from './components/sidebar/sidebar.js';
+export { sidebarMenuButtonVariants } from './components/sidebar/sidebar.styles.js';
+export {
+  ResizablePanelGroup,
+  ResizablePanel,
+  ResizableHandle,
+  type ResizablePanelGroupProps,
+  type ResizablePanelProps,
+  type ResizableHandleProps,
+} from './components/resizable/resizable.js';
