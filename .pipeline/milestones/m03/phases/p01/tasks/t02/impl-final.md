@@ -1,0 +1,7 @@
+- **`packages/ui/src/components/sheet/sheet.styles.ts`** — Created. CVA `sheetContentVariants` with `side` variant (top/right/bottom/left), static style strings for overlay, header, footer, title, description, close button.
+- **`packages/ui/src/components/sheet/sheet.types.ts`** — Created. 10 type exports for all Sheet sub-components; `SheetContentProps` combines Radix Dialog Content props with CVA `VariantProps`.
+- **`packages/ui/src/components/sheet/sheet.tsx`** — Created. 10 sub-components built on `@radix-ui/react-dialog`: Sheet, SheetTrigger, SheetClose, SheetPortal, SheetOverlay, SheetContent (with side prop, embedded close button with inline X SVG), SheetHeader, SheetFooter, SheetTitle, SheetDescription. All have `data-slot` attributes. Re-exports all types.
+- **`packages/ui/src/components/sheet/sheet.test.tsx`** — Created. 22 tests: smoke, open/close interactions (trigger click, ESC, overlay click, close button), side variants (right default, top, bottom, left), title/description rendering, focus trapping, controlled mode, 8 data-slot tests, className merging, vitest-axe a11y check.
+- **`packages/ui/src/components/sheet/sheet.stories.tsx`** — Created. 6 CSF3 stories: Default (right), Left, Top, Bottom, WithForm, WithLongContent. Meta has `tags: ['autodocs']`.
+- **`packages/ui/src/index.ts`** — Modified. Added Sheet export block (10 components, 10 types, `sheetContentVariants`) after Form exports.
+- **Verification**: `pnpm typecheck` — 0 errors. `pnpm --filter @components/ui test -- sheet` — 22/22 pass. `pnpm build` — clean build.
