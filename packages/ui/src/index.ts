@@ -110,3 +110,13 @@ export { Checkbox, type CheckboxProps } from './components/checkbox/checkbox.js'
 export { checkboxVariants } from './components/checkbox/checkbox.styles.js';
 export { Switch, type SwitchProps } from './components/switch/switch.js';
 export { switchVariants } from './components/switch/switch.styles.js';
+export {
+  RadioGroup,
+  RadioGroupItem,
+  type RadioGroupProps,
+  type RadioGroupItemProps,
+} from './components/radio-group/radio-group.js';
+export {
+  radioGroupVariants,
+  radioGroupItemVariants,
+} from './components/radio-group/radio-group.styles.js';
