@@ -1,0 +1,5 @@
+- **`packages/ui/src/components/header/header.styles.ts`** — Created. CVA `headerVariants` with base flex layout styles (`flex items-center h-14 w-full shrink-0 gap-4 border-b border-border bg-background px-4`). No variant dimensions.
+- **`packages/ui/src/components/header/header.types.ts`** — Created. `HeaderProps` extending `React.ComponentProps<'header'>` with `VariantProps`, `actions`, `userInfo`, `asChild`.
+- **`packages/ui/src/components/header/header.tsx`** — Created. Header component with three-region flexbox layout, conditional `Separator` between actions/userInfo, `asChild` support via Radix `Slot`, `data-slot="header"`. Early return for `asChild` path to avoid Slot single-child constraint.
+- **`packages/ui/src/components/header/header.test.tsx`** — Created. 11 tests: default render, data-slot, children rendering, actions slot, userInfo slot, Separator presence/absence (3 tests), className merge, asChild composition, axe accessibility.
+- **`packages/ui/src/components/header/header.stories.tsx`** — Created. CSF3 stories with `tags: ['autodocs']`: Default, WithActions, WithUserInfo, FullHeader, AsChild.
