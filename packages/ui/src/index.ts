@@ -242,3 +242,23 @@ export {
   type BreadcrumbSeparatorProps,
   type BreadcrumbEllipsisProps,
 } from './components/breadcrumb/breadcrumb.js';
+export {
+  SidebarProvider,
+  SidebarTrigger,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  useSidebar,
+  type SidebarProviderProps,
+  type SidebarTriggerProps,
+  type SidebarContentProps,
+  type SidebarGroupProps,
+  type SidebarGroupLabelProps,
+  type SidebarMenuProps,
+  type SidebarMenuItemProps,
+  type SidebarMenuButtonProps,
+} from './components/sidebar/sidebar.js';
+export { sidebarMenuButtonVariants } from './components/sidebar/sidebar.styles.js';
