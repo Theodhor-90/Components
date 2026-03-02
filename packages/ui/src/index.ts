@@ -270,3 +270,7 @@ export {
   type ResizablePanelProps,
   type ResizableHandleProps,
 } from './components/resizable/resizable.js';
+export { Header, type HeaderProps } from './components/header/header.js';
+export { headerVariants } from './components/header/header.styles.js';
+export { AppLayout, type AppLayoutProps } from './components/app-layout/app-layout.js';
+export { appLayoutVariants } from './components/app-layout/app-layout.styles.js';

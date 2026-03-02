@@ -1,0 +1,8 @@
+- **`packages/ui/src/components/app-layout/app-layout.types.ts`** — Created. `AppLayoutProps` extending `React.ComponentProps<'div'>` with `sidebar`, `header`, `defaultOpen`, `open`, `onOpenChange` props and CVA `VariantProps`.
+- **`packages/ui/src/components/app-layout/app-layout.styles.ts`** — Created. `appLayoutVariants` CVA with base `flex h-svh w-full overflow-hidden`.
+- **`packages/ui/src/components/app-layout/app-layout.tsx`** — Created. `AppLayout` wraps `SidebarProvider`, delegates to private `AppLayoutInner` which uses `useMediaQuery` for responsive behavior: desktop renders `SidebarContent`, mobile renders `Sheet` with `side="left"`. Main region has optional `header` and `ScrollArea`-wrapped `children`.
+- **`packages/ui/src/components/app-layout/app-layout.test.tsx`** — Created. 10 tests: smoke render, `data-slot`, desktop sidebar, mobile Sheet, header rendering, children in ScrollArea, `defaultOpen={false}` collapsed state, controlled `open`/`onOpenChange` with `SidebarTrigger`, className merge, vitest-axe a11y. All pass.
+- **`packages/ui/src/components/app-layout/app-layout.stories.tsx`** — Created. 5 stories: Default, CollapsedSidebar, WithHeaderAndSidebar, FullShell, MobileView. CSF3 with `tags: ['autodocs']`.
+- **`packages/ui/src/index.ts`** — Modified. Added exports for `AppLayout`, `AppLayoutProps`, `appLayoutVariants`, plus `Header`, `HeaderProps`, `headerVariants` (from t01, not previously exported).
+- **`packages/ui/package.json`** — Modified (via pnpm). Added `@components/hooks: "workspace:*"` dependency.
+- **Verification**: `pnpm build` ✓, `pnpm typecheck` ✓, `pnpm test` ✓ (33 files, 455 tests), `pnpm lint` ✓.
