@@ -154,3 +154,5 @@ export {
   selectLabelVariants,
   selectSeparatorVariants,
 } from './components/select/select.styles.js';
+export { Slider, type SliderProps } from './components/slider/slider.js';
+export { sliderVariants } from './components/slider/slider.styles.js';
