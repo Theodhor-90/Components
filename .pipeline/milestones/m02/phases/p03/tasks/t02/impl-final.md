@@ -1,0 +1,7 @@
+- **`packages/ui/src/components/slider/slider.types.ts`** — Created. `SliderProps` type extending Radix Slider Root props + CVA `VariantProps`.
+- **`packages/ui/src/components/slider/slider.styles.ts`** — Created. CVA definitions for `sliderVariants`, `sliderTrackVariants`, `sliderRangeVariants`, `sliderThumbVariants` (base classes only).
+- **`packages/ui/src/components/slider/slider.tsx`** — Created. `Slider` component wrapping `@radix-ui/react-slider` with internal track/range/thumb rendering. `aria-label` forwarded to thumbs for axe compliance. Conditional `value`/`defaultValue` forwarding.
+- **`packages/ui/src/components/slider/slider.test.tsx`** — Created. 15 tests: smoke render, data-slot, className merging, single/range thumb count, ARIA attributes, custom min/max/step, disabled state, controlled/uncontrolled usage, keyboard arrow keys, ref forwarding, 3 axe a11y assertions.
+- **`packages/ui/src/components/slider/slider.stories.tsx`** — Created. 7 stories: Default, WithDefaultValue, Range, CustomMinMaxStep, Disabled, WithLabel, Controlled.
+- **`packages/ui/src/index.ts`** — Modified. Added `Slider`, `SliderProps`, `sliderVariants` exports.
+- **`packages/ui/src/test-setup.ts`** — Modified. Added `ResizeObserver`, `hasPointerCapture`, `setPointerCapture`, `releasePointerCapture` stubs for jsdom (required by Radix Slider).
