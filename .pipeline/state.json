@@ -474,7 +474,7 @@
         "totalAttempts": 2,
         "tiebreakerUsed": true
       },
-      "currentPhase": "p02",
+      "currentPhase": "p03",
       "phases": {
         "p01": {
           "status": "completed",
@@ -566,13 +566,13 @@
           }
         },
         "p02": {
-          "status": "in_progress",
+          "status": "completed",
           "planning": {
             "iteration": 2,
             "totalAttempts": 2,
             "tiebreakerUsed": false
           },
-          "currentTask": "t05",
+          "currentTask": null,
           "tasks": {
             "t01": {
               "status": "completed",
@@ -642,14 +642,54 @@
           }
         },
         "p03": {
-          "status": "pending",
+          "status": "spec_locked",
           "planning": {
-            "iteration": 0,
-            "totalAttempts": 0,
+            "iteration": 2,
+            "totalAttempts": 2,
             "tiebreakerUsed": false
           },
           "currentTask": null,
-          "tasks": {}
+          "tasks": {
+            "t01": {
+              "status": "pending",
+              "planning": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              },
+              "implementation": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              }
+            },
+            "t02": {
+              "status": "pending",
+              "planning": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              },
+              "implementation": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              }
+            },
+            "t03": {
+              "status": "pending",
+              "planning": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              },
+              "implementation": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              }
+            }
+          }
         }
       }
     },
