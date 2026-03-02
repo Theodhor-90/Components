@@ -1,0 +1,3 @@
+- **`packages/ui/package.json`** — Modified: added `@hookform/resolvers@^5.2.2`, `@radix-ui/react-slider@^1.3.6`, `react-hook-form@^7.71.2`, `zod@^4.3.6` to `dependencies`
+- **`pnpm-lock.yaml`** — Auto-modified: lockfile updated with resolved dependency tree
+- **Verification**: typecheck passes (0 errors), all 304 tests pass (22 test files), all 4 packages resolve correctly with no unmet peer dependency issues
