@@ -1,0 +1,3 @@
+- **`packages/ui/package.json`** — Added `@radix-ui/react-accordion@^1.2.12`, `@radix-ui/react-scroll-area@^1.2.10`, `@radix-ui/react-tabs@^1.1.13` to `dependencies`
+- **`packages/ui/styles/globals.css`** — Added `--animate-accordion-down` and `--animate-accordion-up` entries in `@theme inline` block; appended `@keyframes accordion-down` and `@keyframes accordion-up` definitions after `@layer base` block
+- **`pnpm-lock.yaml`** — Auto-updated by `pnpm add`
