@@ -129,3 +129,28 @@ export {
   type ToggleGroupItemProps,
 } from './components/toggle-group/toggle-group.js';
 export { toggleGroupVariants } from './components/toggle-group/toggle-group.styles.js';
+export {
+  Select,
+  SelectGroup,
+  SelectValue,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+  SelectLabel,
+  SelectSeparator,
+  type SelectProps,
+  type SelectGroupProps,
+  type SelectValueProps,
+  type SelectTriggerProps,
+  type SelectContentProps,
+  type SelectItemProps,
+  type SelectLabelProps,
+  type SelectSeparatorProps,
+} from './components/select/select.js';
+export {
+  selectTriggerVariants,
+  selectContentVariants,
+  selectItemVariants,
+  selectLabelVariants,
+  selectSeparatorVariants,
+} from './components/select/select.styles.js';
