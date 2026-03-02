@@ -1,0 +1,6 @@
+- **`packages/ui/src/components/breadcrumb/breadcrumb.types.ts`** — Created. 7 prop types (`BreadcrumbProps`, `BreadcrumbListProps`, `BreadcrumbItemProps`, `BreadcrumbLinkProps` with `asChild`, `BreadcrumbPageProps`, `BreadcrumbSeparatorProps`, `BreadcrumbEllipsisProps`)
+- **`packages/ui/src/components/breadcrumb/breadcrumb.styles.ts`** — Created. 6 static style constants for all sub-components
+- **`packages/ui/src/components/breadcrumb/breadcrumb.tsx`** — Created. 7 sub-components: `Breadcrumb` (nav), `BreadcrumbList` (ol), `BreadcrumbItem` (li), `BreadcrumbLink` (a/Slot), `BreadcrumbPage` (span with aria-current), `BreadcrumbSeparator` (li with default chevron SVG), `BreadcrumbEllipsis` (span with three-dot SVG + sr-only "More")
+- **`packages/ui/src/components/breadcrumb/breadcrumb.test.tsx`** — Created. 12 tests: smoke render, nav aria-label, ol list, anchor default, asChild rendering, aria-current/aria-disabled on page, default/custom separator, ellipsis icon+sr-only text, data-slot attributes, className merging, vitest-axe accessibility
+- **`packages/ui/src/components/breadcrumb/breadcrumb.stories.tsx`** — Created. 5 stories: Default, WithCustomSeparator, WithEllipsis, WithRouterLink, ResponsiveCollapsed
+- **`packages/ui/src/index.ts`** — Modified. Added exports for all 7 components and 7 type aliases
