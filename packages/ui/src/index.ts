@@ -120,3 +120,5 @@ export {
   radioGroupVariants,
   radioGroupItemVariants,
 } from './components/radio-group/radio-group.styles.js';
+export { Toggle, type ToggleProps } from './components/toggle/toggle.js';
+export { toggleVariants } from './components/toggle/toggle.styles.js';
