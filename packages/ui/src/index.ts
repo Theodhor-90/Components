@@ -262,3 +262,11 @@ export {
   type SidebarMenuButtonProps,
 } from './components/sidebar/sidebar.js';
 export { sidebarMenuButtonVariants } from './components/sidebar/sidebar.styles.js';
+export {
+  ResizablePanelGroup,
+  ResizablePanel,
+  ResizableHandle,
+  type ResizablePanelGroupProps,
+  type ResizablePanelProps,
+  type ResizableHandleProps,
+} from './components/resizable/resizable.js';
