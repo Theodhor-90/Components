@@ -308,3 +308,12 @@ export {
   type PaginationNextProps,
   type PaginationEllipsisProps,
 } from './components/pagination/pagination.js';
+export {
+  Avatar,
+  AvatarImage,
+  AvatarFallback,
+  type AvatarProps,
+  type AvatarImageProps,
+  type AvatarFallbackProps,
+} from './components/avatar/avatar.js';
+export { avatarVariants } from './components/avatar/avatar.styles.js';
