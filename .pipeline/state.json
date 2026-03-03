@@ -1,6 +1,6 @@
 {
   "project": "components",
-  "currentMilestone": "m04",
+  "currentMilestone": "m05",
   "milestones": {
     "m01": {
       "status": "completed",
@@ -694,13 +694,13 @@
       }
     },
     "m04": {
-      "status": "in_progress",
+      "status": "completed",
       "planning": {
         "iteration": 2,
         "totalAttempts": 2,
         "tiebreakerUsed": false
       },
-      "currentPhase": "p03",
+      "currentPhase": null,
       "phases": {
         "p01": {
           "status": "completed",
@@ -842,13 +842,13 @@
           }
         },
         "p03": {
-          "status": "in_progress",
+          "status": "completed",
           "planning": {
             "iteration": 2,
             "totalAttempts": 2,
             "tiebreakerUsed": true
           },
-          "currentTask": "t05",
+          "currentTask": null,
           "tasks": {
             "t01": {
               "status": "completed",
@@ -920,14 +920,111 @@
       }
     },
     "m05": {
-      "status": "pending",
+      "status": "in_progress",
       "planning": {
-        "iteration": 0,
-        "totalAttempts": 0,
-        "tiebreakerUsed": false
+        "iteration": 2,
+        "totalAttempts": 2,
+        "tiebreakerUsed": true
       },
-      "currentPhase": null,
-      "phases": {}
+      "currentPhase": "p01",
+      "phases": {
+        "p01": {
+          "status": "spec_locked",
+          "planning": {
+            "iteration": 2,
+            "totalAttempts": 2,
+            "tiebreakerUsed": false
+          },
+          "currentTask": null,
+          "tasks": {
+            "t01": {
+              "status": "pending",
+              "planning": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              },
+              "implementation": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              }
+            },
+            "t02": {
+              "status": "pending",
+              "planning": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              },
+              "implementation": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              }
+            },
+            "t03": {
+              "status": "pending",
+              "planning": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              },
+              "implementation": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              }
+            },
+            "t04": {
+              "status": "pending",
+              "planning": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              },
+              "implementation": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              }
+            },
+            "t05": {
+              "status": "pending",
+              "planning": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              },
+              "implementation": {
+                "iteration": 0,
+                "totalAttempts": 0,
+                "tiebreakerUsed": false
+              }
+            }
+          }
+        },
+        "p02": {
+          "status": "pending",
+          "planning": {
+            "iteration": 0,
+            "totalAttempts": 0,
+            "tiebreakerUsed": false
+          },
+          "currentTask": null,
+          "tasks": {}
+        },
+        "p03": {
+          "status": "pending",
+          "planning": {
+            "iteration": 0,
+            "totalAttempts": 0,
+            "tiebreakerUsed": false
+          },
+          "currentTask": null,
+          "tasks": {}
+        }
+      }
     },
     "m06": {
       "status": "pending",
