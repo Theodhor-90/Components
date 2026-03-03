@@ -1,0 +1,2 @@
+- [packages/ui/package.json](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/package.json): added `"react-day-picker": "^9"` to `dependencies` (positioned after `react-hook-form`).
+- [pnpm-lock.yaml](/Users/theodhor/Desktop/Portfolio/Components/pnpm-lock.yaml): added `react-day-picker` lockfile entries in `importers.packages/ui.dependencies`, `packages` (`react-day-picker@9.11.1`), and `snapshots` (`react-day-picker@9.11.1(react@19.2.4)`).
