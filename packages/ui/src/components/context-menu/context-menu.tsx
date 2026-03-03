@@ -64,7 +64,6 @@ export const ContextMenuPortal = ContextMenuPrimitive.Portal;
 
 export function ContextMenuContent({
   className,
-  sideOffset = 4,
   alignOffset = -4,
   ref,
   ...props
@@ -73,7 +72,6 @@ export function ContextMenuContent({
     <ContextMenuPortal>
       <ContextMenuPrimitive.Content
         data-slot="context-menu-content"
-        sideOffset={sideOffset}
         alignOffset={alignOffset}
         className={cn(contextMenuContentStyles, className)}
         ref={ref}
