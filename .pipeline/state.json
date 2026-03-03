@@ -929,13 +929,13 @@
       "currentPhase": "p01",
       "phases": {
         "p01": {
-          "status": "in_progress",
+          "status": "completed",
           "planning": {
             "iteration": 2,
             "totalAttempts": 2,
             "tiebreakerUsed": false
           },
-          "currentTask": "t05",
+          "currentTask": null,
           "tasks": {
             "t01": {
               "status": "completed",
