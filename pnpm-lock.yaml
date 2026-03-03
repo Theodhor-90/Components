@@ -262,6 +262,9 @@ importers:
       react-hook-form:
         specifier: ^7.71.2
         version: 7.71.2(react@19.2.4)
+      react-day-picker:
+        specifier: ^9
+        version: 9.11.1(react@19.2.4)
       react-resizable-panels:
         specifier: ^2.1.7
         version: 2.1.9(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -3559,6 +3562,11 @@ packages:
     resolution: {integrity: sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==}
     peerDependencies:
       react: ^19.2.4
+
+  react-day-picker@9.11.1:
+    resolution: {integrity: sha512-ZDzc8Pf49g8tpwBBIj3ETFWJY31Ap0XEf/O2F/08mID2G9vO7ZBYnf6JQ9rv4V7CGqCVm6vQeO7kh7eA4MWSeg==}
+    peerDependencies:
+      react: '>=16.8.0'
 
   react-hook-form@7.71.2:
     resolution: {integrity: sha512-1CHvcDYzuRUNOflt4MOq3ZM46AronNJtQ1S7tnX6YN4y72qhgiUItpacZUAQ0TyWYci3yz1X+rXaSxiuEm86PA==}
@@ -7620,6 +7628,10 @@ snapshots:
     dependencies:
       react: 19.2.4
       scheduler: 0.27.0
+
+  react-day-picker@9.11.1(react@19.2.4):
+    dependencies:
+      react: 19.2.4
 
   react-hook-form@7.71.2(react@19.2.4):
     dependencies:

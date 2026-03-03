@@ -1,0 +1,2 @@
+- [packages/ui/package.json](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/package.json) — added `"react-day-picker": "^9"` under `dependencies`, positioned after `"react-hook-form"` and before `"react-resizable-panels"`.
+- [pnpm-lock.yaml](/Users/theodhor/Desktop/Portfolio/Components/pnpm-lock.yaml) — not updated because dependency installation could not complete (`ERR_PNPM_META_FETCH_FAIL`: `getaddrinfo ENOTFOUND registry.npmjs.org`).
