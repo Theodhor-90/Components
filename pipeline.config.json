@@ -12,8 +12,8 @@
     },
     "implementation": {
       "agents": {
-        "creator": "opus",
-        "challenger": "opus",
+        "creator": "codex",
+        "challenger": "codex",
         "tiebreaker": "opus"
       },
       "maxIterations": 2
