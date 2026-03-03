@@ -1,0 +1,1 @@
+- No repository files were created or modified; this locked-plan task is verification-only, and command execution was blocked by missing local toolchain binaries (`turbo`, `tsc`, `vitest`, `storybook`) because `pnpm install` could not complete (`ENOTFOUND registry.npmjs.org`).
