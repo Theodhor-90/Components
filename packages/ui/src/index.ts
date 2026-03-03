@@ -446,3 +446,4 @@ export {
   type CommandSeparatorProps,
   type CommandShortcutProps,
 } from './components/command/command.js';
+export { Calendar, type CalendarProps } from './components/calendar/calendar.js';
