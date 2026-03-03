@@ -1,0 +1,2 @@
+- [packages/ui/package.json](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/package.json): added runtime dependencies `@radix-ui/react-context-menu`, `@radix-ui/react-dropdown-menu`, and `cmdk` under `dependencies`.
+- [pnpm-lock.yaml](/Users/theodhor/Desktop/Portfolio/Components/pnpm-lock.yaml): updated lockfile importer entries and resolved package/snapshot sections for `@radix-ui/react-context-menu`, `@radix-ui/react-dropdown-menu`, `@radix-ui/react-menu`, and `cmdk` to match `@components/ui` dependencies.
