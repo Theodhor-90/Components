@@ -339,3 +339,11 @@ export {
 } from './components/hover-card/hover-card.js';
 export { Progress, type ProgressProps } from './components/progress/progress.js';
 export { progressStyles, progressIndicatorStyles } from './components/progress/progress.styles.js';
+export { EmptyState, type EmptyStateProps } from './components/empty-state/empty-state.js';
+export {
+  emptyStateStyles,
+  emptyStateIconStyles,
+  emptyStateTitleStyles,
+  emptyStateDescriptionStyles,
+  emptyStateActionStyles,
+} from './components/empty-state/empty-state.styles.js';
