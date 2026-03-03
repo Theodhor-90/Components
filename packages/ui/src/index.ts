@@ -347,3 +347,10 @@ export {
   emptyStateDescriptionStyles,
   emptyStateActionStyles,
 } from './components/empty-state/empty-state.styles.js';
+export { SearchInput, type SearchInputProps } from './components/search-input/search-input.js';
+export {
+  searchInputContainerStyles,
+  searchInputIconStyles,
+  searchInputClearStyles,
+  searchInputFieldStyles,
+} from './components/search-input/search-input.styles.js';
