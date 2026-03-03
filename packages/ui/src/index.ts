@@ -336,3 +336,5 @@ export {
   type HoverCardTriggerProps,
   type HoverCardContentProps,
 } from './components/hover-card/hover-card.js';
+export { Progress, type ProgressProps } from './components/progress/progress.js';
+export { progressStyles, progressIndicatorStyles } from './components/progress/progress.styles.js';
