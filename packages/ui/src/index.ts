@@ -448,3 +448,4 @@ export {
 } from './components/command/command.js';
 export { Calendar, type CalendarProps } from './components/calendar/calendar.js';
 export { DatePicker, type DatePickerProps } from './components/date-picker/date-picker.js';
+export { TimePicker, type TimePickerProps } from './components/time-picker/time-picker.js';
