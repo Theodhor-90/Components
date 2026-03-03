@@ -328,3 +328,11 @@ export {
   type TooltipContentProps,
   type TooltipProviderProps,
 } from './components/tooltip/tooltip.js';
+export {
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent,
+  type HoverCardProps,
+  type HoverCardTriggerProps,
+  type HoverCardContentProps,
+} from './components/hover-card/hover-card.js';
