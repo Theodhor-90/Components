@@ -308,3 +308,34 @@ export {
   type PaginationNextProps,
   type PaginationEllipsisProps,
 } from './components/pagination/pagination.js';
+export {
+  Avatar,
+  AvatarImage,
+  AvatarFallback,
+  type AvatarProps,
+  type AvatarImageProps,
+  type AvatarFallbackProps,
+} from './components/avatar/avatar.js';
+export { avatarVariants } from './components/avatar/avatar.styles.js';
+export { AvatarGroup, type AvatarGroupProps } from './components/avatar-group/avatar-group.js';
+export { avatarGroupStyles, avatarGroupOverflowStyles } from './components/avatar-group/avatar-group.styles.js';
+export {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipProvider,
+  type TooltipProps,
+  type TooltipTriggerProps,
+  type TooltipContentProps,
+  type TooltipProviderProps,
+} from './components/tooltip/tooltip.js';
+export {
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent,
+  type HoverCardProps,
+  type HoverCardTriggerProps,
+  type HoverCardContentProps,
+} from './components/hover-card/hover-card.js';
+export { Progress, type ProgressProps } from './components/progress/progress.js';
+export { progressStyles, progressIndicatorStyles } from './components/progress/progress.styles.js';

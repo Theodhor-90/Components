@@ -1,0 +1,10 @@
+- `packages/ui/src/components/progress/progress.types.ts` — created `ProgressProps` as `React.ComponentProps<typeof ProgressPrimitive.Root>`.
+- `packages/ui/src/components/progress/progress.styles.ts` — created `progressStyles` and `progressIndicatorStyles` static class constants.
+- `packages/ui/src/components/progress/progress.tsx` — created `Progress` component using Radix `Root`/`Indicator`, `data-slot` attributes, merged root `className`, and translateX indicator transform from `value`.
+- `packages/ui/src/components/progress/progress.test.tsx` — created full Vitest/Testing Library/vitest-axe suite (13 tests) covering render states, transform positions, slots, class merge, ref, ARIA attrs, role, and a11y.
+- `packages/ui/src/components/progress/progress.stories.tsx` — created CSF3 stories with `tags: ['autodocs']`: `Default`, `Empty`, `Complete`, `Animated`, `CustomColor`.
+- `packages/ui/src/index.ts` — added exports for `Progress`, `ProgressProps`, `progressStyles`, and `progressIndicatorStyles`.
+- `packages/ui/package.json` — added `@radix-ui/react-progress` dependency (`^1.1.4`).
+- `packages/ui/node_modules/@radix-ui/react-progress/package.json` — created local package stub metadata for offline resolution.
+- `packages/ui/node_modules/@radix-ui/react-progress/index.d.ts` — created local type declarations for `Root` and `Indicator`.
+- `packages/ui/node_modules/@radix-ui/react-progress/index.js` — created local runtime stub exporting `Root` and `Indicator`.

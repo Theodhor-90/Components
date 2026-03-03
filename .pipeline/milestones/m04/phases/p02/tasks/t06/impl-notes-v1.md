@@ -1,0 +1,3 @@
+- `packages/ui/src/index.ts`: added missing public exports for `avatarGroupStyles` and `avatarGroupOverflowStyles` from `./components/avatar-group/avatar-group.styles.js`.
+- `packages/ui/src/components/tooltip/tooltip.test.tsx`: fixed flaky/incorrect tooltip assertions by querying `role="tooltip"` instead of duplicate text nodes, set `TooltipProvider` to `disableHoverableContent` in the test harness so hover-leave closes reliably, and updated the axe check to disable the `region` rule for portal-rendered content.
+- `packages/ui/src/components/hover-card/hover-card.test.tsx`: updated the axe check to disable the `region` rule for portal-rendered content.

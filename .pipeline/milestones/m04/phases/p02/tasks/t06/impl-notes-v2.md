@@ -1,0 +1,1 @@
+- [packages/ui/src/index.ts](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/src/index.ts): added `export { avatarGroupStyles, avatarGroupOverflowStyles } from './components/avatar-group/avatar-group.styles.js';` to expose missing Avatar Group style exports from the public API.

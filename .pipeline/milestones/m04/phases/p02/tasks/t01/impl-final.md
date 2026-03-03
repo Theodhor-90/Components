@@ -1,0 +1,1 @@
+- [pnpm-lock.yaml](/Users/theodhor/Desktop/Portfolio/Components/pnpm-lock.yaml): added `packages/ui` importer lock entry for `@radix-ui/react-avatar` and added corresponding `packages` + `snapshots` graph entries for `@radix-ui/react-avatar@1.1.10`, `@radix-ui/react-use-is-hydrated@0.1.0`, and `use-sync-external-store@1.5.0` (including peer/optional dependency wiring).
