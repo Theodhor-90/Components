@@ -1,0 +1,2 @@
+- [packages/ui/src/index.ts](/Users/theodhor/Desktop/Portfolio/Components/packages/ui/src/index.ts) — unchanged; verified required `EmptyState`/`SearchInput` component, type, and style exports are already present.
+- No component/source files were created or modified.
