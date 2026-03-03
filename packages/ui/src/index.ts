@@ -318,3 +318,13 @@ export {
 } from './components/avatar/avatar.js';
 export { avatarVariants } from './components/avatar/avatar.styles.js';
 export { AvatarGroup, type AvatarGroupProps } from './components/avatar-group/avatar-group.js';
+export {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipProvider,
+  type TooltipProps,
+  type TooltipTriggerProps,
+  type TooltipContentProps,
+  type TooltipProviderProps,
+} from './components/tooltip/tooltip.js';
