@@ -1,0 +1,1 @@
+- `(none)` — No repository files were created or modified; verification was blocked because dependencies could not be restored in this environment (`pnpm typecheck` failed with missing `turbo`, and `pnpm install`/`pnpm install --offline` failed due missing tarball `@radix-ui/react-context-menu@2.2.16`).
