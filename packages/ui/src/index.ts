@@ -426,3 +426,23 @@ export {
   contextMenuItemVariants,
   contextMenuLabelVariants,
 } from './components/context-menu/context-menu.styles.js';
+export {
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+  type CommandDialogProps,
+  type CommandEmptyProps,
+  type CommandGroupProps,
+  type CommandInputProps,
+  type CommandItemProps,
+  type CommandListProps,
+  type CommandProps,
+  type CommandSeparatorProps,
+  type CommandShortcutProps,
+} from './components/command/command.js';
