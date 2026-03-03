@@ -274,3 +274,37 @@ export { Header, type HeaderProps } from './components/header/header.js';
 export { headerVariants } from './components/header/header.styles.js';
 export { AppLayout, type AppLayoutProps } from './components/app-layout/app-layout.js';
 export { appLayoutVariants } from './components/app-layout/app-layout.styles.js';
+export {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+  TableCaption,
+  TableFooter,
+  type TableProps,
+  type TableHeaderProps,
+  type TableBodyProps,
+  type TableRowProps,
+  type TableHeadProps,
+  type TableCellProps,
+  type TableCaptionProps,
+  type TableFooterProps,
+} from './components/table/table.js';
+export {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationPrevious,
+  PaginationNext,
+  PaginationEllipsis,
+  type PaginationProps,
+  type PaginationContentProps,
+  type PaginationItemProps,
+  type PaginationLinkProps,
+  type PaginationPreviousProps,
+  type PaginationNextProps,
+  type PaginationEllipsisProps,
+} from './components/pagination/pagination.js';
