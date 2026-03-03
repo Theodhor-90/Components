@@ -317,3 +317,4 @@ export {
   type AvatarFallbackProps,
 } from './components/avatar/avatar.js';
 export { avatarVariants } from './components/avatar/avatar.styles.js';
+export { AvatarGroup, type AvatarGroupProps } from './components/avatar-group/avatar-group.js';

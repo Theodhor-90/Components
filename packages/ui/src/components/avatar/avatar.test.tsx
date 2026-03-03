@@ -1,11 +1,36 @@
 import { createRef } from 'react';
 import { render, screen } from '@testing-library/react';
 import { axe } from 'vitest-axe';
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { Avatar, AvatarFallback, AvatarImage } from './avatar.js';
 
 describe('Avatar', () => {
+  const OriginalImage = window.Image;
+
+  beforeEach(() => {
+    class MockImage extends EventTarget {
+      onload: ((event: Event) => void) | null = null;
+      onerror: ((event: Event) => void) | null = null;
+
+      set src(_value: string) {
+        setTimeout(() => {
+          const event = new Event('load');
+          this.dispatchEvent(event);
+          if (this.onload) {
+            this.onload(event);
+          }
+        }, 0);
+      }
+    }
+
+    vi.stubGlobal('Image', MockImage);
+  });
+
+  afterEach(() => {
+    vi.stubGlobal('Image', OriginalImage);
+  });
+
   it('renders fallback text', () => {
     render(
       <Avatar>
@@ -16,7 +41,7 @@ describe('Avatar', () => {
     expect(screen.getByText('JD')).toBeInTheDocument();
   });
 
-  it('renders image element', () => {
+  it('renders image element', async () => {
     render(
       <Avatar>
         <AvatarImage src="/photo.jpg" alt="User" />
@@ -24,7 +49,7 @@ describe('Avatar', () => {
       </Avatar>,
     );
 
-    const image = screen.getByRole('img', { name: 'User' });
+    const image = await screen.findByRole('img', { name: 'User' });
 
     expect(image).toBeInTheDocument();
     expect(image).toHaveAttribute('src', '/photo.jpg');
@@ -51,14 +76,17 @@ describe('Avatar', () => {
     expect(container.querySelector('[data-slot="avatar"]')).toBeInTheDocument();
   });
 
-  it('AvatarImage has data-slot="avatar-image"', () => {
+  it('AvatarImage has data-slot="avatar-image"', async () => {
     render(
       <Avatar>
         <AvatarImage src="/photo.jpg" alt="User" />
       </Avatar>,
     );
 
-    expect(screen.getByRole('img', { name: 'User' })).toHaveAttribute('data-slot', 'avatar-image');
+    expect(await screen.findByRole('img', { name: 'User' })).toHaveAttribute(
+      'data-slot',
+      'avatar-image',
+    );
   });
 
   it('AvatarFallback has data-slot="avatar-fallback"', () => {
@@ -85,14 +113,14 @@ describe('Avatar', () => {
     expect(avatar).toHaveClass('rounded-full');
   });
 
-  it('AvatarImage merges custom className', () => {
+  it('AvatarImage merges custom className', async () => {
     render(
       <Avatar>
         <AvatarImage className="custom-img" src="/photo.jpg" alt="User" />
       </Avatar>,
     );
 
-    const image = screen.getByRole('img', { name: 'User' });
+    const image = await screen.findByRole('img', { name: 'User' });
 
     expect(image).toHaveClass('custom-img');
     expect(image).toHaveClass('aspect-square');
