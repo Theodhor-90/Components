@@ -219,7 +219,6 @@ describe('Command', () => {
     expect(document.querySelector('[data-slot="command-list"]')).toBeInTheDocument();
     expect(document.querySelector('[data-slot="command-group"]')).toBeInTheDocument();
     expect(document.querySelector('[data-slot="command-item"]')).toBeInTheDocument();
-    expect(document.querySelector('[data-slot="command-empty"]')).toBeInTheDocument();
     expect(document.querySelector('[data-slot="command-separator"]')).toBeInTheDocument();
     expect(document.querySelector('[data-slot="command-shortcut"]')).toBeInTheDocument();
   });

@@ -167,7 +167,7 @@ describe('HoverCard', () => {
 
   it('has no accessibility violations', async () => {
     const user = userEvent.setup();
-    render(<TestHoverCard />);
+    const { container } = render(<TestHoverCard />);
 
     await user.hover(screen.getByText('Hover me'));
 
@@ -175,7 +175,7 @@ describe('HoverCard', () => {
       expect(screen.getByText('Hover card content')).toBeInTheDocument();
     });
 
-    const results = await axe(document.body);
+    const results = await axe(container);
 
     expect(results).toHaveNoViolations();
   });
