@@ -1,0 +1,6 @@
+- **`packages/ui/src/components/connection-status/connection-status.styles.ts`** — New. CVA definitions: `connectionStatusVariants` (container with `inline-flex items-center gap-2 text-sm`) and `connectionStatusDotVariants` (dot with green/yellow/red color mapping and `animate-pulse` on connecting)
+- **`packages/ui/src/components/connection-status/connection-status.types.ts`** — New. `ConnectionStatusProps` extending `React.ComponentProps<'div'>` with `VariantProps<typeof connectionStatusDotVariants>` and required `status` prop
+- **`packages/ui/src/components/connection-status/connection-status.tsx`** — New. Component with `data-slot="connection-status"`, `role="status"`, `aria-live="polite"`, status dot, and default/custom label rendering
+- **`packages/ui/src/components/connection-status/connection-status.test.tsx`** — New. 13 tests: smoke, data-slots, ref forwarding, className merging, default labels (×3), custom label, color classes, animate-pulse, ARIA attributes, vitest-axe accessibility
+- **`packages/ui/src/components/connection-status/connection-status.stories.tsx`** — New. 5 CSF3 stories with autodocs: Connected, Connecting, Disconnected, CustomLabel, AllStates
+- **`packages/ui/src/index.ts`** — Modified. Added exports for `ConnectionStatus`, `ConnectionStatusProps`, `connectionStatusVariants`, `connectionStatusDotVariants`

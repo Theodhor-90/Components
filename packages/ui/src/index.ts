@@ -464,3 +464,11 @@ export {
 } from './components/copy-to-clipboard/copy-to-clipboard.js';
 export { copyToClipboardStyles } from './components/copy-to-clipboard/copy-to-clipboard.styles.js';
 export { CodeBlock, type CodeBlockProps } from './components/code-block/code-block.js';
+export {
+  ConnectionStatus,
+  type ConnectionStatusProps,
+} from './components/connection-status/connection-status.js';
+export {
+  connectionStatusVariants,
+  connectionStatusDotVariants,
+} from './components/connection-status/connection-status.styles.js';
