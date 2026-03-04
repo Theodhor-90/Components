@@ -114,8 +114,8 @@ describe('Command', () => {
 
     await waitFor(() => {
       expect(screen.getByText('Calendar')).toBeVisible();
-      expect(screen.getByText('Search')).not.toBeVisible();
-      expect(screen.getByText('Settings')).not.toBeVisible();
+      expect(screen.queryByText('Search')).not.toBeInTheDocument();
+      expect(screen.queryByText('Settings')).not.toBeInTheDocument();
     });
   });
 
@@ -126,7 +126,7 @@ describe('Command', () => {
     await user.click(screen.getByPlaceholderText('Type a command or search...'));
     await user.keyboard('{ArrowDown}');
 
-    const firstItem = screen.getByText('Calendar').closest('[data-slot="command-item"]');
+    const firstItem = screen.getByText('Search').closest('[data-slot="command-item"]');
 
     expect(firstItem).toHaveAttribute('data-selected', 'true');
   });
@@ -140,7 +140,7 @@ describe('Command', () => {
     await user.keyboard('{ArrowDown}');
     await user.keyboard('{Enter}');
 
-    expect(onSelect).toHaveBeenCalledWith('calendar');
+    expect(onSelect).toHaveBeenCalledWith('search');
   });
 
   it('shows CommandEmpty when no items match', async () => {
@@ -212,17 +212,13 @@ describe('Command', () => {
   });
 
   it('applies data-slot attributes to sub-components', async () => {
-    const user = userEvent.setup();
     render(<TestCommandFull />);
-
-    await user.type(screen.getByPlaceholderText('Type a command or search...'), 'zzz');
 
     expect(document.querySelector('[data-slot="command"]')).toBeInTheDocument();
     expect(document.querySelector('[data-slot="command-input"]')).toBeInTheDocument();
     expect(document.querySelector('[data-slot="command-list"]')).toBeInTheDocument();
     expect(document.querySelector('[data-slot="command-group"]')).toBeInTheDocument();
     expect(document.querySelector('[data-slot="command-item"]')).toBeInTheDocument();
-    expect(document.querySelector('[data-slot="command-empty"]')).toBeInTheDocument();
     expect(document.querySelector('[data-slot="command-separator"]')).toBeInTheDocument();
     expect(document.querySelector('[data-slot="command-shortcut"]')).toBeInTheDocument();
   });

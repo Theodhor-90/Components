@@ -446,6 +446,8 @@ export {
   type CommandSeparatorProps,
   type CommandShortcutProps,
 } from './components/command/command.js';
+export { Combobox, type ComboboxProps, type ComboboxOption } from './components/combobox/combobox.js';
+export { ColorPicker, type ColorPickerProps } from './components/color-picker/color-picker.js';
 export { Calendar, type CalendarProps } from './components/calendar/calendar.js';
 export { DatePicker, type DatePickerProps } from './components/date-picker/date-picker.js';
 export { TimePicker, type TimePickerProps } from './components/time-picker/time-picker.js';

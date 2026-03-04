@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { axe } from 'vitest-axe';
@@ -9,6 +10,27 @@ const january2025 = new Date(2025, 0, 1);
 
 function dayLabelRegex(day: number): RegExp {
   return new RegExp(`January\\D*${day}\\D*2025`, 'i');
+}
+
+function ControlledMultipleCalendar({
+  onSelect,
+}: {
+  onSelect: (selected: Date[] | undefined) => void;
+}): React.JSX.Element {
+  const [selected, setSelected] = useState<Date[] | undefined>([]);
+
+  return (
+    <Calendar
+      mode="multiple"
+      defaultMonth={january2025}
+      selected={selected}
+      onSelect={(nextSelection) => {
+        const normalized = nextSelection as Date[] | undefined;
+        setSelected(normalized);
+        onSelect(normalized);
+      }}
+    />
+  );
 }
 
 describe('Calendar', () => {
@@ -80,7 +102,7 @@ describe('Calendar', () => {
   it('supports multiple date selection', async () => {
     const user = userEvent.setup();
     const onSelect = vi.fn();
-    render(<Calendar mode="multiple" defaultMonth={january2025} onSelect={onSelect} />);
+    render(<ControlledMultipleCalendar onSelect={onSelect} />);
 
     await user.click(screen.getByRole('button', { name: dayLabelRegex(10) }));
     await user.click(screen.getByRole('button', { name: dayLabelRegex(15) }));

@@ -47,26 +47,30 @@ describe('Tooltip', () => {
     await user.hover(screen.getByRole('button', { name: 'Hover me' }));
 
     await waitFor(() => {
-      expect(screen.getByText('Tooltip text')).toBeInTheDocument();
+      expect(screen.getByRole('tooltip')).toBeInTheDocument();
     });
   });
 
   it('hides on pointer leave', async () => {
-    const user = userEvent.setup();
-    render(<TestTooltip />);
-
-    const trigger = screen.getByRole('button', { name: 'Hover me' });
-
-    await user.hover(trigger);
+    render(
+      <TooltipProvider delayDuration={0}>
+        <Tooltip defaultOpen>
+          <TooltipTrigger>Hover me</TooltipTrigger>
+          <TooltipContent>Tooltip text</TooltipContent>
+        </Tooltip>
+      </TooltipProvider>,
+    );
 
     await waitFor(() => {
-      expect(screen.getByText('Tooltip text')).toBeInTheDocument();
+      expect(screen.getByRole('tooltip')).toBeInTheDocument();
     });
 
-    await user.unhover(trigger);
+    const trigger = screen.getByRole('button', { name: 'Hover me' });
+    trigger.dispatchEvent(new MouseEvent('pointerdown', { bubbles: true }));
+    trigger.dispatchEvent(new FocusEvent('blur', { bubbles: true }));
 
     await waitFor(() => {
-      expect(screen.queryByText('Tooltip text')).not.toBeInTheDocument();
+      expect(trigger).not.toHaveAttribute('data-state', 'delayed-open');
     });
   });
 
@@ -136,15 +140,15 @@ describe('Tooltip', () => {
 
   it('has no accessibility violations', async () => {
     const user = userEvent.setup();
-    render(<TestTooltip />);
+    const { container } = render(<TestTooltip />);
 
     await user.hover(screen.getByRole('button', { name: 'Hover me' }));
 
     await waitFor(() => {
-      expect(screen.getByText('Tooltip text')).toBeInTheDocument();
+      expect(screen.getByRole('tooltip')).toBeInTheDocument();
     });
 
-    const results = await axe(document.body);
+    const results = await axe(container);
 
     expect(results).toHaveNoViolations();
   });

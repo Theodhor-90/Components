@@ -35,7 +35,11 @@ export function TimePicker({
   const [timeValue, setTimeValue] = useControllableState<string | undefined>({
     prop: value,
     defaultProp: defaultValue,
-    onChange,
+    onChange: (nextValue) => {
+      if (nextValue !== undefined) {
+        onChange?.(nextValue);
+      }
+    },
   });
 
   const hour = timeValue ? timeValue.split(':')[0] : undefined;
