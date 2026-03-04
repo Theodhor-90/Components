@@ -1,0 +1,6 @@
+- `packages/ui/src/components/code-block/code-block.types.ts` — **Created.** `CodeBlockProps` type extending `React.ComponentProps<'div'>` with `children: string`, `showLineNumbers?: boolean`, `language?: string`
+- `packages/ui/src/components/code-block/code-block.styles.ts` — **Created.** Four plain string constant exports: `codeBlockStyles`, `codeBlockPreStyles`, `codeBlockHeaderStyles`, `codeBlockLineNumberStyles`
+- `packages/ui/src/components/code-block/code-block.tsx` — **Created.** Component with conditional header bar (language label + CopyToClipboard) or absolute-positioned copy button, `<pre>`+`<code>` rendering, optional line numbers with dynamic gutter width
+- `packages/ui/src/components/code-block/code-block.test.tsx` — **Created.** 11 tests: smoke render, data-slot, ref forwarding, className merging, pre/code elements, language label display, no language label by default, line numbers, no line numbers by default, copy button, accessibility (vitest-axe)
+- `packages/ui/src/components/code-block/code-block.stories.tsx` — **Created.** 6 stories: Default, WithLanguageLabel, WithLineNumbers, WithLineNumbersAndLanguage, LongContent, EmptyContent
+- `packages/ui/src/index.ts` — **Modified.** Added `CodeBlock` and `type CodeBlockProps` export

@@ -463,3 +463,4 @@ export {
   type CopyToClipboardProps,
 } from './components/copy-to-clipboard/copy-to-clipboard.js';
 export { copyToClipboardStyles } from './components/copy-to-clipboard/copy-to-clipboard.styles.js';
+export { CodeBlock, type CodeBlockProps } from './components/code-block/code-block.js';
