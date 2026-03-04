@@ -140,3 +140,158 @@ describe('Combobox', () => {
     expect(await axe(container)).toHaveNoViolations();
   });
 });
+
+describe('Combobox multi-select', () => {
+  it('multi-select toggles items', async () => {
+    const user = userEvent.setup();
+    render(<Combobox options={options} mode="multiple" />);
+
+    await user.click(screen.getByRole('combobox'));
+
+    const appleItem = screen.getByRole('option', { name: /Apple/ });
+    await user.click(appleItem);
+
+    await waitFor(() => {
+      const checkIcons = document.querySelectorAll('[data-slot="command-item"] svg');
+      const appleCheck = checkIcons[0];
+      expect(appleCheck).toHaveClass('ml-auto h-4 w-4');
+      expect(appleCheck).not.toHaveClass('opacity-0');
+    });
+
+    const appleItemAgain = screen.getByRole('option', { name: /Apple/ });
+    await user.click(appleItemAgain);
+
+    await waitFor(() => {
+      const checkIcons = document.querySelectorAll('[data-slot="command-item"] svg');
+      const appleCheck = checkIcons[0];
+      expect(appleCheck).toHaveClass('opacity-0');
+    });
+  });
+
+  it('multi-select trigger shows single label for one selection', () => {
+    render(<Combobox options={options} mode="multiple" defaultValue={['apple']} />);
+    expect(screen.getByRole('combobox')).toHaveTextContent('Apple');
+  });
+
+  it('multi-select trigger shows count for multiple selections', () => {
+    render(<Combobox options={options} mode="multiple" defaultValue={['apple', 'banana']} />);
+    expect(screen.getByRole('combobox')).toHaveTextContent('2 selected');
+  });
+
+  it('multi-select popover stays open after selection', async () => {
+    const user = userEvent.setup();
+    render(<Combobox options={options} mode="multiple" />);
+
+    await user.click(screen.getByRole('combobox'));
+    await user.click(screen.getByRole('option', { name: /Apple/ }));
+
+    expect(document.querySelector('[data-slot="command"]')).toBeInTheDocument();
+  });
+
+  it('multi-select onValueChange fires with array', async () => {
+    const user = userEvent.setup();
+    const onValueChange = vi.fn();
+    render(<Combobox options={options} mode="multiple" onValueChange={onValueChange} />);
+
+    await user.click(screen.getByRole('combobox'));
+    await user.click(screen.getByRole('option', { name: /Apple/ }));
+
+    expect(onValueChange).toHaveBeenCalledWith(['apple']);
+  });
+
+  it('has no accessibility violations', async () => {
+    const { container } = render(<Combobox options={options} mode="multiple" />);
+    expect(await axe(container)).toHaveNoViolations();
+  });
+});
+
+describe('Combobox create-option', () => {
+  it('create-option appears for unmatched input', async () => {
+    const user = userEvent.setup();
+    render(<Combobox options={options} onCreateOption={vi.fn()} />);
+
+    await user.click(screen.getByRole('combobox'));
+    await user.type(screen.getByPlaceholderText('Search...'), 'Mango');
+
+    await waitFor(() => {
+      expect(screen.getByText('Create Mango')).toBeVisible();
+    });
+  });
+
+  it('create-option callback fires with typed value', async () => {
+    const user = userEvent.setup();
+    const onCreateOption = vi.fn();
+    render(<Combobox options={options} onCreateOption={onCreateOption} />);
+
+    await user.click(screen.getByRole('combobox'));
+    await user.type(screen.getByPlaceholderText('Search...'), 'Mango');
+
+    await waitFor(() => {
+      expect(screen.getByText('Create Mango')).toBeVisible();
+    });
+
+    await user.click(screen.getByText('Create Mango'));
+
+    expect(onCreateOption).toHaveBeenCalledWith('Mango');
+  });
+
+  it('create-option hidden when options match', async () => {
+    const user = userEvent.setup();
+    render(<Combobox options={options} onCreateOption={vi.fn()} />);
+
+    await user.click(screen.getByRole('combobox'));
+    await user.type(screen.getByPlaceholderText('Search...'), 'Apple');
+
+    await waitFor(() => {
+      expect(screen.queryByText('Create Apple')).not.toBeInTheDocument();
+    });
+  });
+
+  it('create-option not shown when onCreateOption not provided', async () => {
+    const user = userEvent.setup();
+    render(<Combobox options={options} />);
+
+    await user.click(screen.getByRole('combobox'));
+    await user.type(screen.getByPlaceholderText('Search...'), 'xyz');
+
+    await waitFor(() => {
+      expect(screen.queryByText('Create xyz')).not.toBeInTheDocument();
+    });
+  });
+
+  it('create-option clears search after creation', async () => {
+    const user = userEvent.setup();
+    render(<Combobox options={options} onCreateOption={vi.fn()} />);
+
+    await user.click(screen.getByRole('combobox'));
+    const searchInput = screen.getByPlaceholderText('Search...');
+    await user.type(searchInput, 'Mango');
+
+    await waitFor(() => {
+      expect(screen.getByText('Create Mango')).toBeVisible();
+    });
+
+    await user.click(screen.getByText('Create Mango'));
+
+    await waitFor(() => {
+      expect(searchInput).toHaveValue('');
+    });
+  });
+
+  it('multi-select with create-option works together', async () => {
+    const user = userEvent.setup();
+    const onCreateOption = vi.fn();
+    render(<Combobox options={options} mode="multiple" onCreateOption={onCreateOption} />);
+
+    await user.click(screen.getByRole('combobox'));
+    await user.type(screen.getByPlaceholderText('Search...'), 'Mango');
+
+    await waitFor(() => {
+      expect(screen.getByText('Create Mango')).toBeVisible();
+    });
+
+    await user.click(screen.getByText('Create Mango'));
+
+    expect(onCreateOption).toHaveBeenCalledWith('Mango');
+  });
+});

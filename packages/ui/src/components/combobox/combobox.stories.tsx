@@ -21,6 +21,33 @@ function ControlledCombobox(): React.JSX.Element {
   return <Combobox options={options} value={value} onValueChange={setValue} />;
 }
 
+function WithCreateOptionCombobox(): React.JSX.Element {
+  const [items, setItems] = useState<ComboboxOption[]>(options);
+
+  return (
+    <Combobox
+      options={items}
+      onCreateOption={(value) => {
+        setItems((prev) => [...prev, { value: value.toLowerCase(), label: value }]);
+      }}
+    />
+  );
+}
+
+function MultiSelectWithCreateOptionCombobox(): React.JSX.Element {
+  const [items, setItems] = useState<ComboboxOption[]>(options);
+
+  return (
+    <Combobox
+      options={items}
+      mode="multiple"
+      onCreateOption={(value) => {
+        setItems((prev) => [...prev, { value: value.toLowerCase(), label: value }]);
+      }}
+    />
+  );
+}
+
 const meta: Meta<typeof Combobox> = {
   title: 'Components/Combobox',
   component: Combobox,
@@ -58,4 +85,27 @@ export const ManyOptions: Story = {
   args: {
     options: manyOptions,
   },
+};
+
+export const MultiSelect: Story = {
+  args: {
+    options,
+    mode: 'multiple',
+  },
+};
+
+export const MultiSelectWithDefaults: Story = {
+  args: {
+    options,
+    mode: 'multiple',
+    defaultValue: ['apple', 'cherry'],
+  },
+};
+
+export const WithCreateOption: Story = {
+  render: () => <WithCreateOptionCombobox />,
+};
+
+export const MultiSelectWithCreateOption: Story = {
+  render: () => <MultiSelectWithCreateOptionCombobox />,
 };

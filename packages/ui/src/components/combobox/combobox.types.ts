@@ -4,15 +4,29 @@ export type ComboboxOption = {
   disabled?: boolean;
 };
 
-export type ComboboxProps = {
+type ComboboxBaseProps = {
   options: ComboboxOption[];
-  value?: string;
-  defaultValue?: string;
-  onValueChange?: (value: string) => void;
   placeholder?: string;
   searchPlaceholder?: string;
   emptyMessage?: string;
   disabled?: boolean;
   className?: string;
   ref?: React.Ref<HTMLButtonElement>;
+  onCreateOption?: (value: string) => void;
 };
+
+type ComboboxSingleProps = ComboboxBaseProps & {
+  mode?: 'single';
+  value?: string;
+  defaultValue?: string;
+  onValueChange?: (value: string) => void;
+};
+
+type ComboboxMultipleProps = ComboboxBaseProps & {
+  mode: 'multiple';
+  value?: string[];
+  defaultValue?: string[];
+  onValueChange?: (value: string[]) => void;
+};
+
+export type ComboboxProps = ComboboxSingleProps | ComboboxMultipleProps;
