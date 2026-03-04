@@ -1081,13 +1081,13 @@
           }
         },
         "p03": {
-          "status": "in_progress",
+          "status": "completed",
           "planning": {
             "iteration": 0,
             "totalAttempts": 0,
             "tiebreakerUsed": false
           },
-          "currentTask": "t04",
+          "currentTask": null,
           "tasks": {
             "t01": {
               "status": "completed",
