@@ -1155,13 +1155,13 @@
       "currentPhase": "p01",
       "phases": {
         "p01": {
-          "status": "in_progress",
+          "status": "completed",
           "planning": {
             "iteration": 2,
             "totalAttempts": 2,
             "tiebreakerUsed": true
           },
-          "currentTask": "t04",
+          "currentTask": null,
           "tasks": {
             "t01": {
               "status": "completed",
