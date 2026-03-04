@@ -458,3 +458,8 @@ export {
   type StepperItemProps,
 } from './components/stepper/stepper.js';
 export { stepperVariants, stepperItemVariants } from './components/stepper/stepper.styles.js';
+export {
+  CopyToClipboard,
+  type CopyToClipboardProps,
+} from './components/copy-to-clipboard/copy-to-clipboard.js';
+export { copyToClipboardStyles } from './components/copy-to-clipboard/copy-to-clipboard.styles.js';
