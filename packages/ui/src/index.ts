@@ -451,3 +451,10 @@ export { ColorPicker, type ColorPickerProps } from './components/color-picker/co
 export { Calendar, type CalendarProps } from './components/calendar/calendar.js';
 export { DatePicker, type DatePickerProps } from './components/date-picker/date-picker.js';
 export { TimePicker, type TimePickerProps } from './components/time-picker/time-picker.js';
+export {
+  Stepper,
+  StepperItem,
+  type StepperProps,
+  type StepperItemProps,
+} from './components/stepper/stepper.js';
+export { stepperVariants, stepperItemVariants } from './components/stepper/stepper.styles.js';
