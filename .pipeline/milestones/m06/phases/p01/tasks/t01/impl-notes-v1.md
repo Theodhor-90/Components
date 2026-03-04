@@ -1,0 +1,7 @@
+- **`packages/ui/src/components/stepper/stepper.types.ts`** — Created. Defines `StepperContextType`, `StepperProps` (with CVA `VariantProps`), `StepperItemProps`, and `StepperItemInternalProps` (`@internal`, with `isLast`).
+- **`packages/ui/src/components/stepper/stepper.styles.ts`** — Created. CVA `stepperVariants` (orientation), `stepperItemVariants` (status), and plain string constants for title, description, and connector styles.
+- **`packages/ui/src/components/stepper/stepper.tsx`** — Created. `Stepper` container with `StepperContext.Provider`, `Children.toArray` + `cloneElement` for `isLast` injection. `StepperItem` reads orientation from context, renders inline SVG status icons, connectors (except last), `aria-current="step"` on active, `data-slot` attributes, sr-only status text.
+- **`packages/ui/src/components/stepper/stepper.test.tsx`** — Created. 16 tests: horizontal/vertical render, 4 status icons, connector count/styling, title+description, className merging (both components), data-slot, ref forwarding, aria-current, axe accessibility (both orientations).
+- **`packages/ui/src/components/stepper/stepper.stories.tsx`** — Created. 7 stories: Horizontal, Vertical, AllStatuses, WithDescriptions, ThreeStepProgress, SingleStep, ErrorState. CSF3 with autodocs.
+
+**Verification:** `pnpm typecheck` — 0 errors. `pnpm test` — 731 tests passed (51 files), 0 failures. Stepper lint — clean.

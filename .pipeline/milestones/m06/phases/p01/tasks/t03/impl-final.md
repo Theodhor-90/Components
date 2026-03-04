@@ -1,0 +1,1 @@
+Mock claude:opus response for dry-run testing.
