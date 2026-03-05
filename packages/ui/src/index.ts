@@ -458,3 +458,16 @@ export {
   type StepperItemProps,
 } from './components/stepper/stepper.js';
 export { stepperVariants, stepperItemVariants } from './components/stepper/stepper.styles.js';
+export {
+  CopyToClipboard,
+  type CopyToClipboardProps,
+} from './components/copy-to-clipboard/copy-to-clipboard.js';
+export { CodeBlock, type CodeBlockProps } from './components/code-block/code-block.js';
+export {
+  ConnectionStatus,
+  type ConnectionStatusProps,
+} from './components/connection-status/connection-status.js';
+export {
+  connectionStatusVariants,
+  connectionStatusDotVariants,
+} from './components/connection-status/connection-status.styles.js';

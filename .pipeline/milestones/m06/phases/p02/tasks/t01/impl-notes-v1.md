@@ -1,0 +1,6 @@
+- `packages/ui/src/components/copy-to-clipboard/copy-to-clipboard.types.ts` — **created**: `CopyToClipboardProps` type extending `React.ComponentProps<'button'>` with `text` and `asChild`
+- `packages/ui/src/components/copy-to-clipboard/copy-to-clipboard.styles.ts` — **created**: `copyToClipboardStyles` plain string constant with base Tailwind classes
+- `packages/ui/src/components/copy-to-clipboard/copy-to-clipboard.tsx` — **created**: component with clipboard API, icon swap, 2-second feedback timeout, `asChild` via Radix Slot, `data-slot`, `aria-label` toggle
+- `packages/ui/src/components/copy-to-clipboard/copy-to-clipboard.test.tsx` — **created**: 11 tests covering smoke render, data-slot, ref forwarding, className merging, clipboard write, icon swap, 2000ms reset, aria-label toggle, asChild polymorphism, custom onClick, vitest-axe a11y
+- `packages/ui/src/components/copy-to-clipboard/copy-to-clipboard.stories.tsx` — **created**: CSF3 stories (Default, AsChild, WithLongText) with autodocs
+- `packages/ui/src/index.ts` — **modified**: added exports for `CopyToClipboard`, `type CopyToClipboardProps`, and `copyToClipboardStyles`
